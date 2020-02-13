@@ -43,12 +43,21 @@ function checkBookByTitle(title) {
 
 
 function countBooksByFirstLetter(letter) {
-  // Your code here
-}
+  let count = 0;
+  for (let i = 0; i < catalogue.length; i++){
+    if (catalogue[i].title.startsWith(letter.toUpperCase())){
+      count++;
+    };
+  };
+  return count;
+};
 
 function getQuantity(title) {
-  // Your code here
-}
+  
+  for (let i = 0; i < catalogue.length; i++){
+    if (catalogue[i].title === title) return catalogue[i].quantity;
+  };
+};
 
 function getBooksByAuthor(author) {
   // Your code here
