@@ -60,8 +60,16 @@ function getQuantity(title) {
 };
 
 function getBooksByAuthor(author) {
-  // Your code here
-}
+  let authorBookList = []
+  for (let i = 0; i < catalogue.length; i++) {
+    if (catalogue[i].author.includes(author)) {
+      authorBookList.push(catalogue[i]);
+      
+    };
+  };
+  return authorBookList;
+};
+
 
 function checkQuantity(title, quantity) {
   // Your code here
