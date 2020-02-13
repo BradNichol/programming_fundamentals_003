@@ -9,3 +9,10 @@ describe("catalogueService", () => {
     });
   });
 });
+
+
+describe("catalogueService.checkBookByTitle", () => {
+  test("returns true if the book exists", () => {
+    expect(catalogueService.checkBookByTitle("The Assassination of Margaret Thatcher")).toBe(true);
+  });
+});
